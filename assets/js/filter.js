@@ -1,10 +1,5 @@
-// ============================================
-// FILTER SYSTEM
-// ============================================
-
 $(document).ready(function () {
     
-    // ===== Type Filter (Hatchback, Sedan, SUV, etc.) =====
     $('.filter-btn[data-filter]').on('click', function () {
         $('.filter-btn[data-filter]').removeClass('active');
         $(this).addClass('active');
@@ -24,7 +19,6 @@ $(document).ready(function () {
         }
     });
     
-    // ===== Category Filter (New, Used) =====
     $('.filter-btn[data-category]').on('click', function () {
         $('.filter-btn[data-category]').removeClass('active');
         $(this).addClass('active');
@@ -44,7 +38,6 @@ $(document).ready(function () {
         }
     });
     
-    // ===== Reset Filters =====
     $('.filter-reset').on('click', function () {
         $('.filter-btn').removeClass('active');
         $('.filter-btn[data-filter="all"]').addClass('active');
@@ -52,16 +45,14 @@ $(document).ready(function () {
         $('.car-item').fadeIn(400);
     });
 });
-// Sitemap Filter Links
+
 $('[data-sitemap-filter]').on('click', function (e) {
     e.preventDefault();
     const filterType = $(this).data('sitemap-filter');
     
-    // Filter button activate karo
     $('.filter-btn[data-filter]').removeClass('active');
     $(`.filter-btn[data-filter="${filterType}"]`).addClass('active');
     
-    // Filter apply karo
     $('.car-item').each(function () {
         if ($(this).data('type') === filterType) {
             $(this).fadeIn(400);
@@ -70,7 +61,6 @@ $('[data-sitemap-filter]').on('click', function (e) {
         }
     });
     
-    // Scroll to new cars
     $('html, body').animate({
         scrollTop: $('#new').offset().top - 100
     }, 800);
