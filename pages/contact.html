@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact CarBreezy Pakistan - Get in touch with us for car buying, selling, queries and support.">
+    <title>Contact Us - CarBreezy Pakistan</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="container">
+            <div class="header-content d-flex justify-content-between align-items-center">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../assets/images/logo.png" alt="CarBreezy Logo" class="logo-img" onerror="this.style.display='none'">
+                    </a>
+                </div>
+                <div class="visitor-counter">
+                    <i class="fas fa-users"></i>
+                    <span>Visitors: <strong id="visitorCount">0</strong></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="new-cars.html"><i class="fas fa-car"></i> New Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="used-cars.html"><i class="fas fa-car-side"></i> Used Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html"><i class="fas fa-trademark"></i> Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offers.html"><i class="fas fa-tags"></i> Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container page-header-content">
+            <h1 data-aos="fade-up">Contact Us</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We're here to help you 24/7</p>
+            <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Contact Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT INFO CARDS ===== -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p>Plot 123, Shahrah-e-Faisal,<br>Karachi, Sindh, Pakistan</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p>info@carbreezy.pk<br>support@carbreezy.pk</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p>+92 300 1234567<br>+92 21 1234 5678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT FORM + SIDEBAR ===== -->
+    <section class="contact-main-section bg-light-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="contact-page-form">
+                        <span class="section-badge">Send Message</span>
+                        <h2 class="section-title mt-3">Get In Touch</h2>
+                        <p class="mb-4">Fill out the form below and our team will get back to you within 24 hours.</p>
+                        
+                        <form id="contactPageForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label><i class="fas fa-user"></i> Your Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label><i class="fas fa-envelope"></i> Email Address</label>
+                                        <input type="email" class="form-control" placeholder="your.email@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label><i class="fas fa-phone"></i> Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="+92 300 1234567" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label><i class="fas fa-tag"></i> Subject</label>
+                                        <select class="form-control" required>
+                                            <option value="">Select a subject</option>
+                                            <option value="buy">Buy a Car</option>
+                                            <option value="sell">Sell a Car</option>
+                                            <option value="query">General Query</option>
+                                            <option value="support">Customer Support</option>
+                                            <option value="feedback">Feedback</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label><i class="fas fa-comment"></i> Your Message</label>
+                                        <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-accent btn-lg">
+                                        <i class="fas fa-paper-plane"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Sidebar -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="contact-sidebar">
+                        <!-- Working Hours -->
+                        <div class="working-hours-card">
+                            <div class="working-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h5>Working Hours</h5>
+                            <ul class="hours-list">
+                                <li>
+                                    <span>Monday - Friday</span>
+                                    <strong>9:00 AM - 8:00 PM</strong>
+                                </li>
+                                <li>
+                                    <span>Saturday</span>
+                                    <strong>10:00 AM - 6:00 PM</strong>
+                                </li>
+                                <li>
+                                    <span>Sunday</span>
+                                    <strong class="closed">Closed</strong>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links-card mt-4">
+                            <h5>Follow Us</h5>
+                            <p>Stay connected on social media</p>
+                            <div class="contact-social-links">
+                                <a href="#" class="social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-btn twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="social-btn linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Contact -->
+                        <div class="emergency-card mt-4">
+                            <div class="emergency-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h5>24/7 Support</h5>
+                            <p>Need urgent help? Call us anytime</p>
+                            <a href="tel:+923001234567" class="emergency-btn">
+                                <i class="fas fa-phone-alt"></i> +92 300 1234567
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP SECTION (WITH GOOGLE MAPS IFRAME) ===== -->
+    <section class="map-section">
+        <div class="container-fluid px-0">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115855.40477069206!2d67.0235591!3d24.8607343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUICK FAQ ===== -->
+    <section class="contact-faq-section bg-light-section">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Quick Help</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="contact-faq-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h5>How do I buy a car?</h5>
+                        <p>Browse our listings, contact the dealer, and we'll guide you through the process.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-faq-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h5>Do you offer delivery?</h5>
+                        <p>Yes! We deliver cars anywhere in Pakistan free of cost.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-faq-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h5>Are the cars verified?</h5>
+                        <p>Every car goes through a 150-point inspection before listing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-faq-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h5>Can I get installments?</h5>
+                        <p>Yes! 0% markup on selected cars with flexible payment plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Ready to Get Started?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Browse our collection or contact us for personalized service</p>
+            <div class="cta-buttons mt-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="new-cars.html" class="btn btn-accent btn-lg me-3">
+                    <i class="fas fa-car"></i> Browse Cars
+                </a>
+                <a href="queries.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-comments"></i> View Queries
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.png" alt="CarBreezy" style="height: 70px;" onerror="this.style.display='none'">
+                    </div>
+                    <p class="footer-text mt-3">
+                        Pakistan's leading automotive digital marketplace. 
+                        Buy & sell cars easily with transparent pricing in PKR.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="new-cars.html"><i class="fas fa-angle-right"></i> New Cars</a></li>
+                        <li><a href="used-cars.html"><i class="fas fa-angle-right"></i> Used Cars</a></li>
+                        <li><a href="brands.html"><i class="fas fa-angle-right"></i> Brands</a></li>
+                        <li><a href="offers.html"><i class="fas fa-angle-right"></i> Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="queries.html"><i class="fas fa-angle-right"></i> Queries</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="footer-text">Subscribe for latest car deals in Pakistan</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-contact mt-3">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@carbreezy.pk</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 CarBreezy Pakistan. All Rights Reserved. | Made with <i class="fas fa-heart text-accent"></i> in Pakistan 🇵🇰</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span id="tickerText"><i class="fas fa-map-marker-alt"></i> Loading location...</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="../assets/js/cars.js"></script>
+    <script src="../assets/js/ticker.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Contact Form Submit
+            $('#contactPageForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                $(this).html(`
+                    <div class="alert alert-success text-center py-5">
+                        <i class="fas fa-check-circle" style="font-size: 60px; margin-bottom: 20px;"></i>
+                        <h4>Message Sent Successfully!</h4>
+                        <p>Shukriya! Aapka message bhej diya gaya hai. Hum 24 hours me contact karenge.</p>
+                        <a href="contact.html" class="btn btn-accent mt-3">
+                            <i class="fas fa-redo"></i> Send Another Message
+                        </a>
+                    </div>
+                `);
+            });
+        });
+    </script>
+</body>
+</html>
