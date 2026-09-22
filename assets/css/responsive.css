@@ -1,0 +1,162 @@
+/* ============================================
+   RESPONSIVE STYLES - CarBreezy
+   ============================================ */
+
+/* ===== Tablet (992px and below) ===== */
+@media (max-width: 991px) {
+    
+    .hero-title { font-size: 2.8rem; }
+    .section-title { font-size: 2.2rem; }
+    .logo-img { height: 55px; }
+    
+    .main-navbar .nav-link {
+        padding: 12px 15px !important;
+        font-size: 13px;
+    }
+    
+    .about-features { grid-template-columns: 1fr; }
+    .contact-form-wrapper { padding: 30px 25px; }
+    .about-image-wrapper { min-height: 350px; }
+    .about-image-wrapper img { min-height: 350px; }
+}
+
+/* ===== Mobile (768px and below) ===== */
+@media (max-width: 767px) {
+    
+    body { padding-bottom: 40px; }
+    
+    .hero-banner { min-height: 85vh; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    
+    .section-title { font-size: 1.8rem; }
+    .section-title::after { width: 60px; }
+    .section-subtitle { font-size: 0.95rem; }
+    
+    .logo-img { height: 45px; }
+    
+    .visitor-counter {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .visitor-counter strong { font-size: 14px; }
+    
+    .filter-wrapper { padding: 30px 20px; }
+    .filter-btn { padding: 8px 15px; font-size: 12px; }
+    
+    .cars-section,
+    .brands-section,
+    .offers-section,
+    .gallery-section,
+    .about-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+    
+    .hero-stats h3 { font-size: 2rem; }
+    .hero-stats p { font-size: 11px; }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        padding: 0 10px;
+    }
+    
+    .gallery-item { height: 200px; }
+    
+    .contact-card { padding: 20px; }
+    .contact-icon { width: 50px; height: 50px; font-size: 20px; }
+    .social-btn { width: 42px; height: 42px; font-size: 16px; }
+    
+    .footer-logo img { height: 60px; }
+    .ticker-content span { font-size: 12px; }
+    
+    .car-modal-header .modal-title { font-size: 1.1rem; }
+    .car-tabs .nav-link { font-size: 11px; padding: 8px 8px; }
+    .spec-list li { font-size: 13px; }
+    
+    .about-image-wrapper { min-height: 300px; }
+    .about-image-wrapper img { min-height: 300px; }
+    .about-placeholder h3 { font-size: 2rem; }
+    .about-placeholder i { font-size: 60px; }
+}
+
+/* ===== Small Mobile (480px and below) ===== */
+@media (max-width: 480px) {
+    
+    .hero-title { font-size: 1.8rem; }
+    
+    .hero-badge {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .section-title { font-size: 1.5rem; }
+    
+    .section-badge {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+    
+    .logo-img { height: 40px; }
+    
+    .visitor-counter {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .btn-accent { padding: 10px 22px; font-size: 13px; }
+    .btn-lg { padding: 12px 25px; font-size: 14px; }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0 !important;
+    }
+    
+    .car-card-img { height: 180px; }
+    .car-card-title { font-size: 1.1rem; }
+    .car-card-price { font-size: 1.2rem; }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .filter-btn i { font-size: 11px; }
+    
+    .brand-card { padding: 20px 15px; }
+    .brand-card img { max-height: 50px; }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .gallery-item { height: 150px; }
+    
+    .ticker-content span { font-size: 11px; }
+    
+    .about-image-wrapper { min-height: 250px; }
+    .about-image-wrapper img { min-height: 250px; }
+    .about-placeholder h3 { font-size: 1.5rem; }
+    .about-placeholder i { font-size: 50px; }
+    .about-placeholder p { font-size: 0.9rem; }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .main-header,
+    .main-navbar,
+    .ticker,
+    .scroll-down,
+    .visitor-counter,
+    .footer-social {
+        display: none !important;
+    }
+    
+    body { padding-bottom: 0; }
+}
