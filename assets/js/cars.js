@@ -1,20 +1,13 @@
-// ============================================
-// CARS DATA RENDERING - CarBreezy (Multi-Page)
-// With Sort + Dynamic Brand Count + Breakdown + Gallery Filter
-// ============================================
-
 let allCars = [];
 let allBrands = [];
 let allOffers = [];
 let allGallery = [];
 let allTeam = [];
 
-// ===== Detect Page Location =====
 function getBasePath() {
     return window.location.pathname.includes('/pages/') ? '../' : '';
 }
 
-// ===== Load Data from JSON =====
 $(document).ready(function () {
     const basePath = getBasePath();
     const jsonPath = basePath + 'assets/data/cars.json';
@@ -26,8 +19,6 @@ $(document).ready(function () {
         allOffers = data.offers || [];
         allGallery = data.gallery || [];
         allTeam = data.team || [];
-        
-        // ===== Render All Sections =====
         
         if ($('#featuredCarsContainer').length) {
             renderFeaturedCars('featuredCarsContainer');
@@ -77,7 +68,6 @@ $(document).ready(function () {
     });
 });
 
-// ===== Helper: Fallback Image (SVG Data URI) =====
 function getFallbackImage(text, width = 400, height = 250) {
     const svg = `
         <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
@@ -101,7 +91,6 @@ function getFallbackImage(text, width = 400, height = 250) {
     return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
-// ===== Get Image Path with Base =====
 function getImagePath(imagePath) {
     if (!imagePath) return '';
     
@@ -118,7 +107,6 @@ function getImagePath(imagePath) {
     return imagePath;
 }
 
-// ===== Render Car Cards =====
 function renderCars(category, containerId) {
     const container = $('#' + containerId);
     
@@ -180,7 +168,6 @@ function renderCars(category, containerId) {
     }
 }
 
-// ===== Render Featured Cars (Home Page - 6 cars) =====
 function renderFeaturedCars(containerId) {
     const container = $('#' + containerId);
     
@@ -227,9 +214,6 @@ function renderFeaturedCars(containerId) {
     container.html(html);
 }
 
-// ============================================
-// RENDER BRANDS - DYNAMIC COUNT + BREAKDOWN
-// ============================================
 function renderBrands() {
     const container = $('#brandsContainer');
     
@@ -241,7 +225,6 @@ function renderBrands() {
         const fallbackImg = getFallbackImage(brand.name, 100, 60);
         const logoPath = getImagePath(brand.logo);
         
-        // ===== DYNAMIC COUNT CALCULATIONS =====
         const totalCount = allCars.filter(car => car.brand === brand.name).length;
         
         const newCount = allCars.filter(car => 
@@ -276,7 +259,6 @@ function renderBrands() {
     container.html(html);
 }
 
-// ===== Render Offers =====
 function renderOffers() {
     const container = $('#offersContainer');
     
@@ -309,9 +291,6 @@ function renderOffers() {
     container.html(html);
 }
 
-// ============================================
-// RENDER GALLERY - GALLERY PAGE ONLY (With Filter + Lightbox)
-// ============================================
 function renderGallery() {
     const container = $('#galleryContainer');
     
@@ -342,7 +321,6 @@ function renderGallery() {
     container.html(html);
 }
 
-// ===== Render Team (About Page) =====
 function renderTeam() {
     const container = $('#teamContainer');
     
@@ -376,10 +354,6 @@ function renderTeam() {
     container.html(html);
 }
 
-// ============================================
-// SORT FUNCTIONALITY
-// ============================================
-
 $(document).ready(function () {
     $(document).on('change', '#sortCars', function () {
         const sortValue = $(this).val();
@@ -387,7 +361,6 @@ $(document).ready(function () {
     });
 });
 
-// ===== Sort Cars =====
 function sortCars(sortValue) {
     const container = $('.car-item').first().parent();
     
@@ -431,7 +404,6 @@ function sortCars(sortValue) {
     }
 }
 
-// ===== Update Results Count =====
 function updateResultsCount() {
     const countEl = $('#resultsCount');
     if (countEl.length) {
@@ -439,7 +411,6 @@ function updateResultsCount() {
     }
 }
 
-// ===== Go to Brand Cars =====
 function goToBrandCars(brandName) {
     if (!window.location.pathname.includes('/pages/')) {
         window.location.href = 'pages/new-cars.html?brand=' + encodeURIComponent(brandName);
@@ -452,7 +423,6 @@ function goToBrandCars(brandName) {
     }
 }
 
-// ===== Filter Cars by Brand =====
 function filterCarsByBrand(brandName) {
     $('.car-item').each(function () {
         const carBrand = $(this).data('brand');
@@ -465,7 +435,6 @@ function filterCarsByBrand(brandName) {
     updateResultsCount();
 }
 
-// ===== Check URL for Brand Filter =====
 $(document).ready(function () {
     const urlParams = new URLSearchParams(window.location.search);
     const brandFilter = urlParams.get('brand');
@@ -477,7 +446,6 @@ $(document).ready(function () {
     }
 });
 
-// ===== Legacy function =====
 function filterByBrand(brandName) {
     goToBrandCars(brandName);
 }
