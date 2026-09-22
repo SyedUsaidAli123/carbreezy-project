@@ -1,17 +1,11 @@
-// ============================================
-// ANIMATIONS
-// ============================================
-
 $(document).ready(function () {
     
-    // ===== AOS Init =====
     AOS.init({
         duration: 1000,
         once: true,
         offset: 100
     });
     
-    // ===== Counter Animation =====
     function animateCounter() {
         $('.counter').each(function () {
             const $this = $(this);
