@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Car Gallery - CarBreezy Pakistan. View our premium collection of luxury, sports, SUV and hatchback cars.">
+    <title>Gallery - CarBreezy Pakistan</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="container">
+            <div class="header-content d-flex justify-content-between align-items-center">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../assets/images/logo.png" alt="CarBreezy Logo" class="logo-img" onerror="this.style.display='none'">
+                    </a>
+                </div>
+                <div class="visitor-counter">
+                    <i class="fas fa-users"></i>
+                    <span>Visitors: <strong id="visitorCount">0</strong></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="new-cars.html"><i class="fas fa-car"></i> New Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="used-cars.html"><i class="fas fa-car-side"></i> Used Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html"><i class="fas fa-trademark"></i> Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offers.html"><i class="fas fa-tags"></i> Offers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container page-header-content">
+            <h1 data-aos="fade-up">Car Gallery</h1>
+            <p data-aos="fade-up" data-aos-delay="100">A glimpse of our premium collection</p>
+            <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY FILTER ===== -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="gallery-filter text-center" data-aos="fade-up">
+                <button class="gallery-filter-btn active" data-gallery-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="gallery-filter-btn" data-gallery-filter="luxury">
+                    <i class="fas fa-crown"></i> Luxury
+                </button>
+                <button class="gallery-filter-btn" data-gallery-filter="sports">
+                    <i class="fas fa-tachometer-alt"></i> Sports
+                </button>
+                <button class="gallery-filter-btn" data-gallery-filter="suv">
+                    <i class="fas fa-truck"></i> SUV
+                </button>
+                <button class="gallery-filter-btn" data-gallery-filter="sedan">
+                    <i class="fas fa-car-side"></i> Sedan
+                </button>
+                <button class="gallery-filter-btn" data-gallery-filter="hatchback">
+                    <i class="fas fa-car"></i> Hatchback
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY GRID ===== -->
+    <section class="gallery-page-section">
+        <div class="container-fluid px-0">
+            <div class="gallery-page-grid" id="galleryContainer">
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-accent" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY STATS ===== -->
+    <section class="gallery-stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="gallery-stat-card">
+                        <div class="gallery-stat-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3 class="counter" data-target="500">0</h3>
+                        <p>Photos</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-stat-card">
+                        <div class="gallery-stat-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="counter" data-target="100">0</h3>
+                        <p>Car Models</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-stat-card">
+                        <div class="gallery-stat-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Photo Shoots</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-stat-card">
+                        <div class="gallery-stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="counter" data-target="10000">0</h3>
+                        <p>Likes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Want to Feature Your Car?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Send us your car photos and get featured in our gallery</p>
+            <a href="contact.html" class="btn btn-accent btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-camera"></i> Submit Photos
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.png" alt="CarBreezy" style="height: 70px;" onerror="this.style.display='none'">
+                    </div>
+                    <p class="footer-text mt-3">
+                        Pakistan's leading automotive digital marketplace. 
+                        Buy & sell cars easily with transparent pricing in PKR.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="new-cars.html"><i class="fas fa-angle-right"></i> New Cars</a></li>
+                        <li><a href="used-cars.html"><i class="fas fa-angle-right"></i> Used Cars</a></li>
+                        <li><a href="brands.html"><i class="fas fa-angle-right"></i> Brands</a></li>
+                        <li><a href="offers.html"><i class="fas fa-angle-right"></i> Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="queries.html"><i class="fas fa-angle-right"></i> Queries</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="footer-text">Subscribe for latest car deals in Pakistan</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-contact mt-3">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@carbreezy.pk</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 CarBreezy Pakistan. All Rights Reserved. | Made with <i class="fas fa-heart text-accent"></i> in Pakistan 🇵🇰</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span id="tickerText"><i class="fas fa-map-marker-alt"></i> Loading location...</span>
+        </div>
+    </div>
+
+    <!-- ===== IMAGE LIGHTBOX MODAL ===== -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content lightbox-content">
+                <button type="button" class="lightbox-close" data-bs-dismiss="modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img id="lightboxImage" src="" alt="Gallery Image" class="lightbox-img">
+                <div class="lightbox-caption">
+                    <h4 id="lightboxTitle">Image Title</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="../assets/js/cars.js"></script>
+    <script src="../assets/js/ticker.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    
+    <!-- Gallery Filter Script -->
+    <script>
+        $(document).ready(function() {
+            // Gallery filter
+            $(document).on('click', '.gallery-filter-btn', function() {
+                $('.gallery-filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                const filter = $(this).data('gallery-filter');
+                
+                $('.gallery-page-item').each(function() {
+                    const category = $(this).data('category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        $(this).fadeIn(400);
+                    } else {
+                        $(this).fadeOut(400);
+                    }
+                });
+            });
+            
+            // Lightbox
+            $(document).on('click', '.gallery-page-item', function() {
+                const imgSrc = $(this).find('img').attr('src');
+                const title = $(this).find('.gallery-page-title').text();
+                
+                $('#lightboxImage').attr('src', imgSrc);
+                $('#lightboxTitle').text(title);
+                
+                const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+                modal.show();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest Car Offers in Pakistan - CarBreezy. Exclusive deals, discounts and finance offers on new & used cars.">
+    <title>Offers - CarBreezy Pakistan</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="container">
+            <div class="header-content d-flex justify-content-between align-items-center">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../assets/images/logo.png" alt="CarBreezy Logo" class="logo-img" onerror="this.style.display='none'">
+                    </a>
+                </div>
+                <div class="visitor-counter">
+                    <i class="fas fa-users"></i>
+                    <span>Visitors: <strong id="visitorCount">0</strong></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="new-cars.html"><i class="fas fa-car"></i> New Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="used-cars.html"><i class="fas fa-car-side"></i> Used Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html"><i class="fas fa-trademark"></i> Brands</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="offers.html"><i class="fas fa-tags"></i> Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container page-header-content">
+            <h1 data-aos="fade-up">Exciting Offers</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Grab the best deals before they're gone!</p>
+            <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Offers</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED OFFER BANNER ===== -->
+    <section class="featured-offer-section">
+        <div class="container">
+            <div class="featured-offer-banner" data-aos="fade-up">
+                <div class="featured-offer-content">
+                    <span class="featured-offer-badge">
+                        <i class="fas fa-fire"></i> LIMITED TIME
+                    </span>
+                    <h2>Mega Sale 2025</h2>
+                    <p>
+                        Get up to <strong>15% OFF</strong> on all new cars. 
+                        Free registration, 1 year insurance, and 0% markup on installments!
+                    </p>
+                    <div class="featured-offer-timer">
+                        <div class="timer-box">
+                            <span id="days">00</span>
+                            <label>Days</label>
+                        </div>
+                        <div class="timer-box">
+                            <span id="hours">00</span>
+                            <label>Hours</label>
+                        </div>
+                        <div class="timer-box">
+                            <span id="minutes">00</span>
+                            <label>Mins</label>
+                        </div>
+                        <div class="timer-box">
+                            <span id="seconds">00</span>
+                            <label>Secs</label>
+                        </div>
+                    </div>
+                    <a href="new-cars.html" class="btn btn-accent btn-lg mt-4">
+                        <i class="fas fa-shopping-cart"></i> Shop Now
+                    </a>
+                </div>
+                <div class="featured-offer-image">
+                    <i class="fas fa-percent"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ALL OFFERS ===== -->
+    <section class="offers-page-section">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Deals & Discounts</span>
+                <h2 class="section-title">All Current Offers</h2>
+                <p class="section-subtitle">Save big on your next car purchase</p>
+            </div>
+
+            <div class="row g-4" id="offersContainer">
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-accent" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OFFER CATEGORIES ===== -->
+    <section class="about-section bg-light-section">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Offer Types</span>
+                <h2 class="section-title">What We Offer</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h5>Discount Offers</h5>
+                        <p>Flat discounts on selected car models</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h5>Finance Offers</h5>
+                        <p>0% markup on easy installments</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h5>Free Gifts</h5>
+                        <p>Free registration, insurance & accessories</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h5>Exchange Offers</h5>
+                        <p>Exchange your old car for a new one</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Want Custom Offers?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Contact us for personalized deals on your favorite car</p>
+            <a href="contact.html" class="btn btn-accent btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-phone"></i> Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.png" alt="CarBreezy" style="height: 70px;" onerror="this.style.display='none'">
+                    </div>
+                    <p class="footer-text mt-3">
+                        Pakistan's leading automotive digital marketplace. 
+                        Buy & sell cars easily with transparent pricing in PKR.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="new-cars.html"><i class="fas fa-angle-right"></i> New Cars</a></li>
+                        <li><a href="used-cars.html"><i class="fas fa-angle-right"></i> Used Cars</a></li>
+                        <li><a href="brands.html"><i class="fas fa-angle-right"></i> Brands</a></li>
+                        <li><a href="offers.html"><i class="fas fa-angle-right"></i> Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="queries.html"><i class="fas fa-angle-right"></i> Queries</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="footer-text">Subscribe for latest car deals in Pakistan</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-contact mt-3">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@carbreezy.pk</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 CarBreezy Pakistan. All Rights Reserved. | Made with <i class="fas fa-heart text-accent"></i> in Pakistan 🇵🇰</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span id="tickerText"><i class="fas fa-map-marker-alt"></i> Loading location...</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="../assets/js/cars.js"></script>
+    <script src="../assets/js/ticker.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    
+    <!-- Offers Timer -->
+    <script>
+        // Countdown Timer
+        function startOfferTimer() {
+            // 30 days from now
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 30);
+            
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = endDate.getTime() - now;
+                
+                if (distance < 0) {
+                    $('#days, #hours, #minutes, #seconds').text('00');
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                $('#days').text(String(days).padStart(2, '0'));
+                $('#hours').text(String(hours).padStart(2, '0'));
+                $('#minutes').text(String(minutes).padStart(2, '0'));
+                $('#seconds').text(String(seconds).padStart(2, '0'));
+            }
+            
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+        
+        $(document).ready(function() {
+            startOfferTimer();
+        });
+    </script>
+</body>
+</html>
