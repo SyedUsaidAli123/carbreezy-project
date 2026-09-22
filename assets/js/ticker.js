@@ -1,28 +1,19 @@
-// ============================================
-// TICKER + VISITOR COUNTER - Pakistani Version
-// ============================================
-
 $(document).ready(function () {
 
-    // ===== Visitor Counter (localStorage) =====
     let visitorCount = localStorage.getItem('carbreezy_visitors') || 0;
     visitorCount = parseInt(visitorCount) + 1;
     localStorage.setItem('carbreezy_visitors', visitorCount);
     
-    // Animate counter
     animateCounter('#visitorCount', visitorCount);
 
-    // ===== Ticker: Date, Time, Location =====
     updateTicker();
     setInterval(updateTicker, 1000);
 
 });
 
-// ===== Update Ticker =====
 function updateTicker() {
     const now = new Date();
     
-    // Pakistani date format
     const dateOptions = { 
         weekday: 'long', 
         year: 'numeric', 
@@ -32,7 +23,6 @@ function updateTicker() {
     const date = now.toLocaleDateString('en-PK', dateOptions);
     const time = now.toLocaleTimeString('en-PK');
 
-    // Geolocation
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             function (position) {
@@ -50,7 +40,6 @@ function updateTicker() {
                 );
             },
             function (error) {
-                // Location denied - show default
                 showDefaultTicker(date, time);
             }
         );
@@ -59,7 +48,6 @@ function updateTicker() {
     }
 }
 
-// ===== Default Ticker (Agar Location Na Mile) =====
 function showDefaultTicker(date, time) {
     $('#tickerText').html(
         `<i class="fas fa-map-marker-alt"></i> Pakistan ` +
@@ -72,7 +60,6 @@ function showDefaultTicker(date, time) {
     );
 }
 
-// ===== Animate Counter =====
 function animateCounter(selector, target) {
     let current = 0;
     const increment = Math.ceil(target / 50);
