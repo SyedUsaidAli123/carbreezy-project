@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarBreezy Pakistan - Drive Your Next Story. Pakistan's trusted automotive marketplace.">
+    <title>Home - CarBreezy Pakistan</title>
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="container">
+            <div class="header-content d-flex justify-content-between align-items-center">
+                <div class="logo-section">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/logo.png" alt="CarBreezy Logo" class="logo-img" onerror="this.style.display='none'">
+                    </a>
+                </div>
+                <div class="visitor-counter">
+                    <i class="fas fa-users"></i>
+                    <span>Visitors: <strong id="visitorCount">0</strong></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/new-cars.html"><i class="fas fa-car"></i> New Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/used-cars.html"><i class="fas fa-car-side"></i> Used Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/brands.html"><i class="fas fa-trademark"></i> Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/offers.html"><i class="fas fa-tags"></i> Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO BANNER ===== -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 text-white" data-aos="fade-right">
+                    <span class="hero-badge">
+                        <i class="fas fa-star"></i> Pakistan's Trusted Car Marketplace
+                    </span>
+                    <h1 class="hero-title mt-3">
+                        Drive Your <span class="text-accent">Next Story</span><br>
+                        With CarBreezy
+                    </h1>
+                    <p class="hero-subtitle mt-3">
+                        Buy & Sell cars easily with CarBreezy Pakistan. Explore thousands of 
+                        cars from trusted brands like Toyota, Honda, Suzuki, Kia & more.
+                    </p>
+                    <div class="hero-buttons mt-4">
+                        <a href="pages/new-cars.html" class="btn btn-accent btn-lg me-3">
+                            <i class="fas fa-car"></i> Explore Cars
+                        </a>
+                        <a href="pages/contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone"></i> Contact Us
+                        </a>
+                    </div>
+                    <div class="hero-stats mt-5 row g-3">
+                        <div class="col-4"><div class="stat-box"><h3 class="counter" data-target="5000">0</h3><p>Cars Available</p></div></div>
+                        <div class="col-4"><div class="stat-box"><h3 class="counter" data-target="1200">0</h3><p>Happy Customers</p></div></div>
+                        <div class="col-4"><div class="stat-box"><h3 class="counter" data-target="50">0</h3><p>Trusted Brands</p></div></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <img src="assets/images/banner.png" alt="Car" class="hero-car-img img-fluid" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED CARS (Home Page Preview) ===== -->
+    <section class="cars-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Featured</span>
+                <h2 class="section-title">Featured Cars</h2>
+                <p class="section-subtitle">Hand-picked cars from our collection</p>
+            </div>
+            <div class="row g-4" id="featuredCarsContainer">
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-accent" role="status"></div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pages/new-cars.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-arrow-right"></i> View All Cars
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUICK FEATURES ===== -->
+    <section class="about-section bg-light-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Why Us</span>
+                <h2 class="section-title">Why Choose CarBreezy?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="feature-box">
+                        <div class="feature-box-icon"><i class="fas fa-check-circle"></i></div>
+                        <h5>Verified Listings</h5>
+                        <p>100% verified cars with genuine documents</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="feature-box-icon"><i class="fas fa-tag"></i></div>
+                        <h5>Best Prices</h5>
+                        <p>Transparent pricing in PKR with no hidden charges</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="feature-box-icon"><i class="fas fa-truck"></i></div>
+                        <h5>Home Delivery</h5>
+                        <p>Doorstep delivery across Pakistan</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div class="feature-box-icon"><i class="fas fa-credit-card"></i></div>
+                        <h5>Easy Installments</h5>
+                        <p>0% markup on selected cars</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Ready to Find Your Dream Car?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Browse our collection and drive home your next story today!</p>
+            <a href="pages/new-cars.html" class="btn btn-accent btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-car"></i> Explore Now
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="CarBreezy" style="height: 70px;" onerror="this.style.display='none'">
+                    </div>
+                    <p class="footer-text mt-3">
+                        Pakistan's leading automotive digital marketplace. 
+                        Buy & sell cars easily with transparent pricing in PKR.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="pages/new-cars.html"><i class="fas fa-angle-right"></i> New Cars</a></li>
+                        <li><a href="pages/used-cars.html"><i class="fas fa-angle-right"></i> Used Cars</a></li>
+                        <li><a href="pages/brands.html"><i class="fas fa-angle-right"></i> Brands</a></li>
+                        <li><a href="pages/offers.html"><i class="fas fa-angle-right"></i> Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="pages/gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="pages/contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="pages/queries.html"><i class="fas fa-angle-right"></i> Queries</a></li>
+                        <li><a href="pages/sitemap.html"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="footer-text">Subscribe for latest car deals in Pakistan</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-contact mt-3">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@carbreezy.pk</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 CarBreezy Pakistan. All Rights Reserved. | Made with <i class="fas fa-heart text-accent"></i> in Pakistan 🇵🇰</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span id="tickerText"><i class="fas fa-map-marker-alt"></i> Loading location...</span>
+        </div>
+    </div>
+
+    <!-- CAR MODAL -->
+    <div class="modal fade" id="carModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content car-modal-content">
+                <div class="modal-header car-modal-header">
+                    <h5 class="modal-title" id="carModalTitle">Car Name</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <img id="carModalImage" src="" alt="Car" class="img-fluid rounded-3">
+                            <div class="car-price-box mt-3">
+                                <span>Price:</span>
+                                <h3 id="carModalPrice">₨ 0</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="nav nav-tabs car-tabs" id="carTabs" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#internal" type="button"><i class="fas fa-couch"></i> Internal</button></li>
+                                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#external" type="button"><i class="fas fa-car"></i> External</button></li>
+                                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#engine" type="button"><i class="fas fa-cog"></i> Engine</button></li>
+                                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#dimensions" type="button"><i class="fas fa-ruler-combined"></i> Dimensions</button></li>
+                            </ul>
+                            <div class="tab-content car-tab-content mt-3">
+                                <div class="tab-pane fade show active" id="internal"><ul class="spec-list" id="internalSpecs"></ul></div>
+                                <div class="tab-pane fade" id="external"><ul class="spec-list" id="externalSpecs"></ul></div>
+                                <div class="tab-pane fade" id="engine"><ul class="spec-list" id="engineSpecs"></ul></div>
+                                <div class="tab-pane fade" id="dimensions"><ul class="spec-list" id="dimensionsSpecs"></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-accent"><i class="fas fa-phone"></i> Contact Dealer</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="assets/js/cars.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/ticker.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
